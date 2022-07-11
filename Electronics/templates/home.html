@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Products</h1>
+<div class="row">
+    {% for mobile in mobiles %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="{{mobile.image_url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{mobile.Brand}}</h5>
+                <p class="card-text">{{mobile.Model}}</p>
+                <p class="card-text">Rs{{mobile.Price}}</p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
